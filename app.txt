@@ -1,0 +1,13 @@
+Project Idea: Creating a Simple Task Manager
+
+Description:
+You'll create a basic task manager application that allows users to add, delete, and view tasks. The tasks will be stored in a JSON file.
+
+Features:
+
+Add Task: Users can add a new task along with details such as task name, description, deadline, etc.
+Delete Task: Users can delete a task by providing its unique identifier.
+View Tasks: Users can view all the tasks currently stored in the system.
+Save and Load: Tasks will be stored in a JSON file, so the application should be able to save tasks to the file and load tasks from the file when the application starts.
+Simple Command-Line Interface (CLI): Since this is a beginner-level project, you can implement a simple CLI for interacting with the application. For example, users might type commands like "add", "delete", "view", etc., to perform actions.
+Error Handling: Implement basic error handling for cases like invalid input, non-existent tasks, etc.

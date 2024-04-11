@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager App</title>
+
+    <!-- css file -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="title">Task Manager App</h1>
+    <!-- Adding The Tasks -->
+    <!-- Tasks will be added here. -->
+    <div class="task-container">
+      <div class="input-task">
+        <label for="task">Enter your task: </label>
+        <input
+          type="text"
+          name="name"
+          id="task"
+          placeholder="Task here..."
+          required
+        />
+      </div>
+      <button class="add btn">Add Task</button>
+    </div>
+
+    <!-- Showing the Tasks -->
+
+    <div class="dashboard">
+      <button class="show-task">Show Tasks</button>
+      <div class="task-list"></div>
+    </div>
+  </body>
+  <script src="./js/index.js"></script>
+</html>
