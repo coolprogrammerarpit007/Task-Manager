@@ -22,6 +22,7 @@ const taskList = document.querySelector(".task-list");
 const addedTasks = [];
 let count = 0;
 let newTask = 0;
+
 // **********************************
 
 // function to add the task
@@ -50,8 +51,10 @@ addTaskBtn.addEventListener("click", addTask);
 
 // function to be called to show task
 const showTask = () => {
+  taskList.classList.remove("hide");
   const taskShow = Number(prompt("Enter your task id: "));
 
+  // check if the id valid or not
   let checkId = addedTasks[taskShow]?.id === taskShow;
 
   // here ?. is nullish coercion operator
@@ -101,46 +104,22 @@ showTaskBtn.addEventListener("click", showTask);
 // **********************************
 
 // Adding the search feature to the task manager App.
-[
-  {
-    id: 0,
-    "Task-Description": "Code Early in the morning.",
-  },
-];
 
+// when the search button is clicked
 searchBtn.addEventListener("click", function (e) {
   if (addedTasks.length > 0) {
+    // taking value from the search bar
     const input = inputSearch.value.toLowerCase();
+
+    // Itterating over tasks array
     for (let i = 0; i < addedTasks.length; i++) {
-      let userTask = addedTasks[i]["Task-Description"];
-      // if(userTask.indexOf)
-      // console.log(userTask);
-      // taskList.classList.add("hide");
-      // const newTaskList = document.createElement("div");
-      // const newTask = document.createElement("h1");
-      // newTask.innerText = userTask;
-      // newTaskList.appendChild(newTask);
-      // dashboard.appendChild(newTaskList);
+      if (addedTasks[i]["Task-Description"].toLowerCase().indexOf(input) > -1) {
+        taskList.classList.add("hide");
+        const newTask = document.createElement("p");
+        newTask.innerText = addedTasks[i]["Task-Description"];
+        dashboard.appendChild(newTask);
+        inputSearch.value = "";
+      }
     }
-  } else {
-    alert(`Task need to be added first, before it searched out!`);
   }
 });
-
-// **********************************
-// **********************************
-// **********************************
-// **********************************
-// **********************************
-
-// Logic for the filter task search
-
-// 1. get the value from search bar entered by the user and store it into a variable.
-
-// 2. if object array > 0:
-
-// 3. start loop over object array
-
-// 4. if userInput === array[id][task]
-
-// 5. show that task and hide the other tasks
