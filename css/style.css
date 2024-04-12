@@ -87,10 +87,40 @@ body {
   padding: 35rem 20rem;
 }
 
+/* Styling the search bar */
+
+.search-tasks {
+  border: none;
+  border-radius: 1rem;
+  padding: 0.7rem 1.3rem;
+  width: 95%;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  border: 0.3rem solid rgb(133, 118, 255);
+}
+.search-btn {
+  position: absolute;
+  top: 5.4rem;
+  left: 2rem;
+  background-color: rgb(255, 201, 74);
+  color: #000;
+  border: none;
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+
+.search-btn:hover {
+  background-color: #000;
+  color: rgb(255, 201, 74);
+}
+
 .dashboard .show-task {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 5rem;
+  margin: 1rem auto;
   padding: 0.75rem 1.3rem;
   border: none;
   border-radius: 5px;
@@ -106,7 +136,7 @@ body {
 
 .task-list {
   position: absolute;
-  top: 4rem;
+  top: 10rem;
   left: 2rem;
 }
 
@@ -137,4 +167,9 @@ body {
 #delete-btn:hover {
   background-color: #000;
   color: rgb(231, 41, 41);
+}
+
+/* Filtering Divs */
+.hide {
+  display: none;
 }
